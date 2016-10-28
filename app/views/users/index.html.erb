@@ -1,19 +1,9 @@
 <%= search_form_for @q do |f| %>
   <p class="lead">Narrow results:</p>
 
-  <div class="form-group">
+     <div class="form-group">
     <%= f.label :email_cont, "Email containing" %>
     <%= f.text_field :email_cont, :class => "form-control", :placeholder => "Email containing" %>
-  </div>
-
-<div class="form-group">
-    <%= f.label :password_eq, "Password equals" %>
-    <%= f.text_field :password_eq, :class => "form-control", :placeholder => "Password equals" %>
-  </div>
-
-<div class="form-group">
-    <%= f.label :password_cont, "Password containing" %>
-    <%= f.text_field :password_cont, :class => "form-control", :placeholder => "Password containing" %>
   </div>
 
   <%= f.submit :class => "btn btn-primary btn-block" %>
