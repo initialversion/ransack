@@ -1,3 +1,40 @@
+<%= search_form_for @q do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :user_id_lt, "User less than" %>
+    <%= f.text_field :user_id_lt, :class => "form-control", :placeholder => "User less than" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :user_id_lteq, "User less than or equal to" %>
+    <%= f.text_field :user_id_lteq, :class => "form-control", :placeholder => "User less than or equal to" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :user_id_gt, "User greater than" %>
+    <%= f.text_field :user_id_gt, :class => "form-control", :placeholder => "User greater than" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :user_id_gteq, "User greater than or equal to" %>
+    <%= f.text_field :user_id_gteq, :class => "form-control", :placeholder => "User greater than or equal to" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :caption_eq, "Caption equals" %>
+    <%= f.text_field :caption_eq, :class => "form-control", :placeholder => "Caption equals" %>
+  </div>
+
+<div class="form-group">
+    <%= f.label :caption_cont, "Caption containing" %>
+    <%= f.text_field :caption_cont, :class => "form-control", :placeholder => "Caption containing" %>
+  </div>
+
+  <%= f.submit :class => "btn btn-primary btn-block" %>
+
+  <a href="/photos" class="btn btn-default btn-block">Clear filters</a>
+<% end %>
 <div class="page-header">
   <h1>
     Photos
